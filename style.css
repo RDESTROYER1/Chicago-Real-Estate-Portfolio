@@ -123,22 +123,22 @@ a:hover {
 
 .firstsection .btn {
     padding: 12px;
-    background: rgb(170, 107, 228) !important;
-    color: bisque !important;
+    background: #CFAE70 !important;
+    color: whitesmoke !important;
     border: 2px solid #5A6E8C;
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
 }
 .firstsection .btn:hover {
-    background: bisque !important;
-    color:  rgb(170, 107, 228) !important;
+    background: whitesmoke !important;
+    color: #CFAE70 !important;
     font-size: 1.02rem;
 }
 
 .firstsection .bto {
     padding: 12px;
-    color: bisque;
+    color: whitesmoke;
     background: transparent;
     border: 2px solid #5A6E8C;
     border-radius: 6px;
@@ -146,8 +146,8 @@ a:hover {
     cursor: pointer;
 }
 .firstsection .bto:hover {
-    background: bisque;
-    color:  rgb(170, 107, 228);
+    background: whitesmoke;
+    color:  #CFAE70;
     font-size: 1.02rem;
 }
 
@@ -271,3 +271,4 @@ footer {
     color: #CFAE70;
 
 }
+
