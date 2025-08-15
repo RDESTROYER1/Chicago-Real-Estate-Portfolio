@@ -108,15 +108,47 @@ a:hover {
 #element:hover {
     color: whitesmoke;
 }
-.btn {
+.buttons {
+    display: flex;
+    gap: 8px;
+    width: auto; 
+    margin-top: 20px;
+}
+.firstsection .bto,
+.firstsection .btn {
+    width: 220px; 
+    padding: 12px 0;
+}
+
+
+.firstsection .btn {
     padding: 12px;
-    background: #CFAE70;
-    color: whitesmoke;
+    background: rgb(170, 107, 228) !important;
+    color: bisque !important;
     border: 2px solid #5A6E8C;
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
+}
+.firstsection .btn:hover {
+    background: bisque !important;
+    color:  rgb(170, 107, 228) !important;
+    font-size: 1.02rem;
+}
 
+.firstsection .bto {
+    padding: 12px;
+    color: bisque;
+    background: transparent;
+    border: 2px solid #5A6E8C;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.firstsection .bto:hover {
+    background: bisque;
+    color:  rgb(170, 107, 228);
+    font-size: 1.02rem;
 }
 
 .secondsection {
@@ -237,4 +269,5 @@ footer {
 
 .footer .second ul li {
     color: #CFAE70;
+
 }
