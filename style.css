@@ -271,4 +271,20 @@ footer {
     color: #CFAE70;
 
 }
+.secondsection .btk
+{
+     padding: 12px;
+    background: rgb(170, 107, 228);
+    color: bisque;
+    border: 2px solid #5A6E8C;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.secondsection .btk:hover {
+     background: bisque;
+     color: rgb(170, 107, 228);
+     font-size: 1.02rem;
+}
+
 
