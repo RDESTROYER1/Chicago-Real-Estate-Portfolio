@@ -160,8 +160,7 @@ a:hover {
     margin-left: 93px;
     position: relative;
     padding-bottom: 100px; 
-    background-color: rgba(0, 0, 0, 0.15);
-    z-index: 1;
+    
 }
 .secondsection h1 {
     font-size: 1.6rem;
@@ -457,6 +456,7 @@ footer {
     font-size: 0.85rem;
   }
 }
+
 
 
 
