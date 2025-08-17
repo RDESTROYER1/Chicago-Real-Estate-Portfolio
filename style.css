@@ -356,6 +356,107 @@ main {
 footer {
   margin-top: auto; /* footer stays at bottom */
 }
+/* Mobile (strictly size changes only) */
+@media screen and (max-width: 768px) {
+
+  nav {
+    height: 80px;
+  }
+
+  nav ul li {
+    margin: 15px;
+  }
+
+  a:hover {
+    font-size: 0.95rem;
+  }
+
+  .j {
+    font-size: 1rem;
+    top: -15px;
+  }
+
+  #bg-video {
+    height: 250px;
+    width: 100%;
+  }
+
+  .firstsection {
+    margin: 50px 20px;
+    font-size: 1.5rem;
+    height: auto;
+    width: 90%;
+    margin-top: 100px;
+  }
+
+  .firstsection .btn,
+  .firstsection .bto {
+    width: 160px;
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+
+  .firstsection .btn:hover,
+  .firstsection .bto:hover {
+    font-size: 0.95rem;
+  }
+
+  .secondsection {
+    margin-top: 20vh;
+    margin-left: 20px;
+    padding-bottom: 60px;
+  }
+
+  .secondsection h1 {
+    font-size: 1.2rem;
+  }
+
+  .secondsection .box {
+    margin: 30px 0;
+  }
+
+  .secondsection .vertical {
+    margin: 0 60px;
+    height: 70px;
+  }
+
+  .title {
+    font-size: 1rem;
+    width: 140px;
+  }
+
+  .desc {
+    font-size: 0.7rem;
+    width: 120px;
+  }
+
+  .image,
+  .imag {
+    width: 20px;
+  }
+
+  footer {
+    height: 80px;
+    padding: 6px 6px;
+  }
+
+  footer p,
+  footer a {
+    font-size: 0.8rem;
+  }
+
+  .search-container input {
+    width: 160px;
+    padding: 6px 10px;
+  }
+
+  .search-container button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+
 
 
 
