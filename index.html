@@ -179,20 +179,13 @@ var typed = new Typed('#element', {
 document.getElementById("githubBtn").addEventListener("click", function () {
     window.open("https://www.chicago.gov/content/dam/city/sites/invest_sw/rfp/11339-43_s_michigan_appraisal.pdf", "_blank");
 });
-
-
-
-<script>
-    // Smooth scroll to bottom Search Property button
-    document.getElementById("analysisBtn").addEventListener("click", function () {
-        document.querySelector(".btk").scrollIntoView({
-            behavior: "smooth"
-        });
-    });
 </script>
 
 
-<script>
+
+
+
+<script> 
 document.getElementById("searchBtn").addEventListener("click", () => {
     const query = document.getElementById("propertySearch").value.toLowerCase();
 
@@ -248,10 +241,35 @@ document.getElementById("searchBtn").addEventListener("click", () => {
 });
 </script>
 
+<script>
+document.addEventListener("scroll", function() {
+    const footer = document.querySelector("footer");
+    const searchBar = document.querySelector(".search-container");
+    const footerRect = footer.getBoundingClientRect();
+
+    // If footer enters viewport → hide search bar
+    if (footerRect.top < window.innerHeight) {
+        searchBar.classList.add("hidden");
+    } else {
+        searchBar.classList.remove("hidden");
+    }
+});
+</script>
+
+<script>
+    // Smooth scroll to bottom Search Property button
+    document.getElementById("analysisBtn").addEventListener("click", function () {
+        document.querySelector(".search-container").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+</script>
+
 </body>
 
 
 </html>
+
 
 
 
