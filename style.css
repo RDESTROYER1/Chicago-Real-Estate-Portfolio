@@ -326,6 +326,25 @@ body { padding-bottom: 90px; }          /* space so CTA never covers content */
   visibility: hidden;
   pointer-events: none;                 /* prevent clicks when hidden */
 }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* pushes footer down */
+}
+
+footer {
+  margin-top: auto; /* footer stays at bottom */
+}
+
+
 
 
 
