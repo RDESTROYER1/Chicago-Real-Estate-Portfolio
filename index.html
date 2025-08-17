@@ -238,7 +238,9 @@
         const results = props.filter(p => {
           const locName = (locations.find(l => l.id === p.locationId)?.name || '').toLowerCase();
           const title   = (p.title || '').toLowerCase();
-          return query ? title.includes(query) || locName.includes(query) : true;
+          const type      = (p.type || '').toLowerCase();
+          const amenities = (p.amenities || []).join(" ").toLowerCase();
+          return query ? title.includes(query) || locName.includes(query) || type.includes(query) || amenities.includes(query) : true;
         });
 
         let html = `<h2 style="margin-top:0">Search Results</h2><ul>`;
@@ -306,6 +308,7 @@
 
 
 </html>
+
 
 
 
