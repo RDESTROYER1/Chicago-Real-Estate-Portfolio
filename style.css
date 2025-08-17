@@ -230,19 +230,27 @@ footer {
     width: 100%;
     padding: 40px 20px;   /* space inside footer */
     height: 110px;    /* ensures height */
+    
+              
+    display: flex;
+    align-items: center;     /* center vertically */
+    justify-content: center; /* center horizontally */
+    margin-top: auto;        /* stick to bottom */
 }
+
+
+
 
    
     
 
-}
+
 
 .footer {
-    display: flex;
-    margin-top: -36px;
+    
+    
     justify-content: space-evenly;
-    text-align: center;
-
+    
 }
 
 .footer ul {
@@ -254,7 +262,7 @@ footer {
     text-align: center;
 }
 .footer {
-    display: flex;
+    
     flex-wrap: wrap;
 }
 
@@ -348,6 +356,7 @@ main {
 footer {
   margin-top: auto; /* footer stays at bottom */
 }
+
 
 
 
