@@ -228,6 +228,10 @@ footer {
     background-color: rgba(6, 2, 2, 0.4);
     color: #CFAE70;
     width: 100%;
+    padding: 40px 20px;   /* space inside footer */
+    min-height: 150px;    /* ensures height */
+}
+
    
     
 
@@ -344,6 +348,7 @@ main {
 footer {
   margin-top: auto; /* footer stays at bottom */
 }
+
 
 
 
