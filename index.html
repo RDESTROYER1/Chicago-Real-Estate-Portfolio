@@ -223,24 +223,26 @@
 
 <script>
   document.getElementById("analysisBtn").addEventListener("click", function () {
-    let query = document.getElementById("propertySearch").value.toLowerCase();
-    let properties = document.querySelectorAll(".property");
+  let query = document.getElementById("propertySearch").value.toLowerCase();
+  let properties = document.querySelectorAll(".vertical"); // each property card
 
-    properties.forEach(prop => {
-      let title = prop.dataset.title.toLowerCase();
-      if (title.includes(query)) {
-        prop.style.display = "block"; 
-      } else {
-        prop.style.display = "none";  
-      }
-    });
+  properties.forEach(prop => {
+    let titleText = prop.querySelector(".title").innerText.toLowerCase();
+    if (titleText.includes(query)) {
+      prop.style.display = "block";
+    } else {
+      prop.style.display = "none";
+    }
   });
+});
+
 </script>
 
 </body>
 
 
 </html>
+
 
 
 
