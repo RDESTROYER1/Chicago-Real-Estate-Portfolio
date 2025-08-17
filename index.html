@@ -224,7 +224,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('propertySearch');
-  const btn = document.getElementById('analysisBtn');
+  const searchBtn = document.getElementById('searchBtn');
 
   function doSearch() {
     const query = (input?.value || '').toLowerCase().trim();
@@ -289,8 +289,15 @@
       });
   }
 
-  if (btn) btn.addEventListener('click', doSearch);
+  // Trigger search
+  if (searchBtn) searchBtn.addEventListener('click', doSearch);
+  if (input) {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') doSearch();
+    });
+  }
 });
+
 
 
 </script>
@@ -299,6 +306,7 @@
 
 
 </html>
+
 
 
 
