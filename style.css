@@ -228,14 +228,14 @@ footer {
     background-color: rgba(6, 2, 2, 0.4);
     color: #CFAE70;
     width: 100%;
-    padding: 10px 10px;   /* space inside footer */
-    height: 110px;    /* ensures height */
+    height: 110px;                  /* exact height */
+    padding: 10px 10px;             /* won’t add extra now */
+    box-sizing: border-box;         /* includes padding inside height */
     
-              
     display: flex;
-    align-items: center;     /* center vertically */
-    justify-content: center; /* center horizontally */
-    margin-top: auto;        /* stick to bottom */
+    align-items: center;            /* center vertically */
+    justify-content: center;        /* center horizontally */
+    margin-top: auto;
 }
 
 
@@ -356,6 +356,7 @@ main {
 footer {
   margin-top: auto; /* footer stays at bottom */
 }
+
 
 
 
