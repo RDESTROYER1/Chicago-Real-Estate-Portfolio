@@ -229,7 +229,7 @@ footer {
     color: #CFAE70;
     width: 100%;
     padding: 40px 20px;   /* space inside footer */
-    min-height: 150px;    /* ensures height */
+    min-height: 100px;    /* ensures height */
 }
 
    
@@ -348,6 +348,7 @@ main {
 footer {
   margin-top: auto; /* footer stays at bottom */
 }
+
 
 
 
