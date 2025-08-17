@@ -318,6 +318,16 @@ footer {
     opacity: 0;
     visibility: hidden;
 }
+/* keep your existing CSS; just add/ensure these */
+body { padding-bottom: 90px; }          /* space so CTA never covers content */
+
+.search-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;                 /* prevent clicks when hidden */
+}
+
+
 
 
 
