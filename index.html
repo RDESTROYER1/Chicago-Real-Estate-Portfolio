@@ -208,7 +208,8 @@
 
 
 <!-- put this inside <head> or just before </body> -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
     new Typed('#element', {
   strings: ['Discover', 'Invest', 'Thrive'],
   typeSpeed: 50,
@@ -218,10 +219,29 @@
 
 </script>
 
+    
+
+<script>
+  document.getElementById("analysisBtn").addEventListener("click", function () {
+    let query = document.getElementById("propertySearch").value.toLowerCase();
+    let properties = document.querySelectorAll(".property");
+
+    properties.forEach(prop => {
+      let title = prop.dataset.title.toLowerCase();
+      if (title.includes(query)) {
+        prop.style.display = "block"; 
+      } else {
+        prop.style.display = "none";  
+      }
+    });
+  });
+</script>
+
 </body>
 
 
 </html>
+
 
 
 
