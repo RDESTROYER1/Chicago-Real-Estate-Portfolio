@@ -155,120 +155,63 @@
 
 
     </footer>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
     <script>
-        var typed = new Typed('#element', {
-            strings: ['Discover', 'Invest', 'Thrive'],
-            typeSpeed: 50,
-        });
-    </script>
+  // Typed.js init (once)
+  if (window.Typed) {
+    new Typed('#element', { strings: ['Discover', 'Invest', 'Thrive'], typeSpeed: 50 });
+  }
 
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
-
-
-
-<script>
-var typed = new Typed('#element', {
-    strings: ['Discover', 'Invest', 'Thrive'],
-    typeSpeed: 50,
-});
-
-document.getElementById("githubBtn").addEventListener("click", function () {
+  // External PDF button
+  document.getElementById("githubBtn").addEventListener("click", function () {
     window.open("https://www.chicago.gov/content/dam/city/sites/invest_sw/rfp/11339-43_s_michigan_appraisal.pdf", "_blank");
-});
-</script>
+  });
 
+  // Smooth scroll: top "Search Property" button -> second section
+  document.getElementById("analysisBtn").addEventListener("click", function () {
+    document.querySelector(".secondsection").scrollIntoView({ behavior: "smooth" });
+  });
 
+  // Hide floating CTA when footer is visible
+  const searchBar = document.querySelector(".search-container");
+  const footer = document.querySelector("footer");
 
-
-
-<script> 
-document.getElementById("searchBtn").addEventListener("click", () => {
-    const query = document.getElementById("propertySearch").value.toLowerCase();
-
-    fetch('https://rdestroyer1.github.io/Real-estate-database/database.json')
-        .then(response => response.json())
-        .then(data => {
-            let output = '<h2>Search Results</h2><ul>';
-
-            // Filter properties by title or location
-            const locations = data.locations;
-            const results = data.properties.filter(prop => {
-                const locationName = locations.find(loc => loc.id === prop.locationId)?.name || '';
-                return prop.title.toLowerCase().includes(query) ||
-                       locationName.toLowerCase().includes(query);
-            });
-
-            if (results.length > 0) {
-                results.forEach(prop => {
-                    const locationName = locations.find(loc => loc.id === prop.locationId)?.name || '';
-                    output += `<li><strong>${prop.title}</strong> - $${prop.price} - ${locationName}</li>`;
-                });
-            } else {
-                output += `<li>No properties found for "${query}"</li>`;
-            }
-
-            output += '</ul>';
-
-            // Show popup modal
-            const container = document.createElement('div');
-            container.innerHTML = output + '<br><button id="closeModal">Close</button>';
-            container.style.position = 'fixed';
-            container.style.top = '50%';
-            container.style.left = '50%';
-            container.style.transform = 'translate(-50%, -50%)';
-            container.style.background = 'rgba(255,255,255,0.95)';
-            container.style.padding = '20px';
-            container.style.border = '2px solid black';
-            container.style.zIndex = '9999';
-            container.style.maxHeight = '70vh';
-            container.style.overflowY = 'auto';
-
-            document.body.appendChild(container);
-
-            // Close button
-            document.getElementById("closeModal").addEventListener("click", () => {
-                container.remove();
-            });
-        })
-        .catch(err => {
-            console.error('Error fetching database:', err);
-            alert('Unable to load property data.');
-        });
-});
-</script>
-
-<script>
-document.addEventListener("scroll", function() {
-    const footer = document.querySelector("footer");
-    const searchBar = document.querySelector(".search-container");
-    const footerRect = footer.getBoundingClientRect();
-
-    // If footer enters viewport → hide search bar
-    if (footerRect.top < window.innerHeight) {
+  // Guard in case elements are missing
+  if (searchBar && footer && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        // Footer entered viewport -> hide CTA
         searchBar.classList.add("hidden");
-    } else {
+      } else {
+        // Footer not in view -> show CTA
         searchBar.classList.remove("hidden");
-    }
-});
+      }
+    }, {
+      root: null,
+      threshold: 0,
+      rootMargin: "0px 0px -10% 0px"   // hide a bit before overlapping
+    });
+
+    io.observe(footer);
+  } else {
+    // Fallback: simple scroll handler
+    document.addEventListener("scroll", function () {
+      const rect = footer.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        searchBar.classList.add("hidden");
+      } else {
+        searchBar.classList.remove("hidden");
+      }
+    });
+  }
 </script>
 
-<script>
-    // Smooth scroll to bottom Search Property button
-    document.getElementById("analysisBtn").addEventListener("click", function () {
-        document.querySelector(".search-container").scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-</script>
 
 </body>
 
 
 </html>
+
 
 
 
