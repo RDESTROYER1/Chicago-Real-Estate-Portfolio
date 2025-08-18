@@ -31,6 +31,7 @@ nav {
 }
 nav:hover {
     background-color: rgba(207, 174, 112, 0.6);
+}
     
     
     
@@ -246,6 +247,7 @@ footer {
 
 footer:hover {
     background-color: rgba(207, 174, 112, 0.6);
+}
     
 
 
@@ -465,6 +467,7 @@ footer {
     font-size: 0.85rem;
   }
 }
+
 
 
 
