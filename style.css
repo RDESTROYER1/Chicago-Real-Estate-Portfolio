@@ -24,11 +24,16 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 110px;
-    background-color: rgba(6, 2, 2, 0.4);
+    background-color: rgba(0, 0, 0, 0);
     width:100%;
     
 
 }
+nav:hover {
+    background-color: rgba(207, 174, 112, 0.6);
+    
+    
+    
 
 nav ul {
     display: flex;
@@ -226,7 +231,7 @@ p
     color: whitesmoke;
 }
 footer {
-    background-color: rgba(6, 2, 2, 0.4);
+    background-color: rgba(0, 0, 0, 0);
     color: #CFAE70;
     width: 100%;
     height: 110px;                  /* exact height */
@@ -238,6 +243,10 @@ footer {
     justify-content: center;        /* center horizontally */
     margin-top: auto;
 }
+
+footer:hover {
+    background-color: rgba(207, 174, 112, 0.6);
+    
 
 
 
@@ -456,6 +465,7 @@ footer {
     font-size: 0.85rem;
   }
 }
+
 
 
 
