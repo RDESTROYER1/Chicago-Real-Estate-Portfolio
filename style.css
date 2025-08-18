@@ -24,14 +24,12 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 110px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(207, 174, 112, 0.6);
     width:100%;
     
 
 }
-nav:hover {
-    background-color: rgba(207, 174, 112, 0.6);
-}
+
     
     
     
@@ -232,7 +230,7 @@ p
     color: whitesmoke;
 }
 footer {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(207, 174, 112, 0.6);
     color: #CFAE70;
     width: 100%;
     height: 110px;                  /* exact height */
@@ -245,10 +243,6 @@ footer {
     margin-top: auto;
 }
 
-footer:hover {
-    background-color: rgba(207, 174, 112, 0.6);
-}
-    
 
 
 
@@ -467,6 +461,7 @@ footer {
     font-size: 0.85rem;
   }
 }
+
 
 
 
