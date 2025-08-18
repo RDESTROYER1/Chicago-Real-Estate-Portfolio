@@ -27,7 +27,7 @@ nav:hover, footer:hover {
   background-color: rgba(0, 0, 0, 0.2); /* black transparent on hover */
 }
 .secondsection:hover {
-    background-color: transparent; /* default */
+    background-color: rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease; /* smooth effect */
 }
 
@@ -178,6 +178,7 @@ a:hover {
     margin-left: 93px;
     position: relative;
     padding-bottom: 100px; 
+    background-color: transparent; 
     
 }
 .secondsection h1 {
@@ -477,6 +478,7 @@ footer {
     font-size: 0.85rem;
   }
 }
+
 
 
 
