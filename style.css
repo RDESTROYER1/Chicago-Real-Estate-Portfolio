@@ -26,9 +26,11 @@ nav, footer {
 nav:hover, footer:hover {
   background-color: rgba(0, 0, 0, 0.2); /* black transparent on hover */
 }
-secondsection:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+.secondsection:hover {
+    background-color: transparent; /* default */
+    transition: background-color 0.3s ease; /* smooth effect */
 }
+
     
 
 nav {
@@ -475,6 +477,7 @@ footer {
     font-size: 0.85rem;
   }
 }
+
 
 
 
