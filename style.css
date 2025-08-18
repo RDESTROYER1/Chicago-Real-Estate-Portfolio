@@ -18,6 +18,14 @@ body {
 
 
 }
+nav, footer {
+  background-color: transparent; /* fully transparent */
+  transition: background-color 0.3s ease;
+}
+
+nav:hover, footer:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* black transparent on hover */
+}
 
 nav {
     display: flex;
@@ -362,14 +370,7 @@ main {
 footer {
   margin-top: auto; /* footer stays at bottom */
 }
-nav, footer {
-  background-color: transparent; /* fully transparent */
-  transition: background-color 0.3s ease;
-}
 
-nav:hover, footer:hover {
-  background-color: rgba(0, 0, 0, 0.6); /* black transparent on hover */
-}
 
 /* Mobile (strictly size changes only) */
 @media screen and (max-width: 768px) {
@@ -470,6 +471,7 @@ nav:hover, footer:hover {
     font-size: 0.85rem;
   }
 }
+
 
 
 
