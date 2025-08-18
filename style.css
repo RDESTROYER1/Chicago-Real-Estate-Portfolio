@@ -24,7 +24,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 110px;
-    background-color: rgba(207, 174, 112, 0.6);
+    
     width:100%;
     
 
@@ -230,7 +230,7 @@ p
     color: whitesmoke;
 }
 footer {
-    background-color: rgba(207, 174, 112, 0.6);
+  
     color: #CFAE70;
     width: 100%;
     height: 110px;                  /* exact height */
@@ -362,6 +362,15 @@ main {
 footer {
   margin-top: auto; /* footer stays at bottom */
 }
+nav, footer {
+  background-color: transparent; /* fully transparent */
+  transition: background-color 0.3s ease;
+}
+
+nav:hover, footer:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* black transparent on hover */
+}
+
 /* Mobile (strictly size changes only) */
 @media screen and (max-width: 768px) {
 
@@ -461,6 +470,7 @@ footer {
     font-size: 0.85rem;
   }
 }
+
 
 
 
