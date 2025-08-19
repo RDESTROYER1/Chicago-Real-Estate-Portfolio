@@ -10,7 +10,7 @@ if (window.Typed) {
 // External PDF button
 document.getElementById("githubBtn")?.addEventListener("click", function () {
   window.open(
-    "https://www.chicago.gov/content/dam/city/sites/invest_sw/rfp/11339-43_s_michigan_appraisal.pdf",
+    "https://www.choosechicago.com/uploads/mp360/mpsouth/",
     "_blank"
   );
 });
