@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function doSearch() {
     const query = (input?.value || "").toLowerCase().trim();
 
-    fetch("https://rdestroyer1.github.io/Real-estate-database/")
+    fetch("https://rdestroyer1.github.io/Real-estate-database/database.json")
       .then((r) => r.json())
       .then((data) => {
         const locations = data.locations || [];
@@ -217,5 +217,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Enter") doSearch();
   });
 });
+
 
 
